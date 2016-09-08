@@ -6,6 +6,7 @@ public class teamTest {
 		System.out.println("we are a team!");
 		System.out.println("LLLHgo!");
 		System.out.println("I am coming back.^_^");
+		System.out.println("Where is my photo?!!!");
 	}
 
 }
