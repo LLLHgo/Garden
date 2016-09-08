@@ -8,5 +8,4 @@ public class teamTest {
 		System.out.println("I am coming back.^_^");
 		System.out.println("Where is my photo?!!!");
 	}
-
 }
