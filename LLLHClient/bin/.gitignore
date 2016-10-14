@@ -1,6 +1,2 @@
-/businesslogic/
-/businesslogicservice/
-/dataservice/
-/po/
-/presentation/
-/vo/
+/src/
+/.project
