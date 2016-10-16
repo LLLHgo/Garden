@@ -2,7 +2,7 @@ package businesslogicservice.hotelstaffblservice;
 
 import java.util.List;
 
-
+import Enum.OrderType;
 import Enum.ResultMessage;
 import vo.hotelinfoVO.HotelinfoVO;
 import vo.hotelinfoVO.RoominfoVO;
@@ -23,13 +23,13 @@ public interface HotelstaffBLService {
 	 * @param password
 	 * @return 是否将新密码持久化保存
 	 */
-	public ResultMessage setPassword(String password);
+	public ResultMessage setPassword(String hotelID,String password);
 	/**
 	 * 将酒店促销策略持久化保存
 	 * @param vo
 	 * @return 是否将酒店促销策略持久化保存
 	 */
-	public ResultMessage updatehotelStrategy(HotelStrategyVO vo);
+	public ResultMessage updatehotelStrategy(String hotelID,HotelStrategyVO vo);
 	/**
 	 * 获得酒店促销策略信息
 	 * @param hotelID
@@ -48,13 +48,13 @@ public interface HotelstaffBLService {
 	 * @param vo
 	 * @return 酒店信息
 	 */
-	public HotelinfoVO gethotelinfoVO(HotelinfoVO vo);
+	public HotelinfoVO gethotelinfoVO(String hotelID);
 	/**
 	 * 获得房间信息
 	 * @param roomID
 	 * @return 房间信息
 	 */
-	public RoominfoVO getroominfo(String roomID);
+	public RoominfoVO getroominfo(String hotelID,String roomID);
 	/**
 	 * 将房间信息持久化保存
 	 * @param vo
@@ -73,7 +73,7 @@ public interface HotelstaffBLService {
 	 * @param state
 	 * @return 是否将订单状态持久化保存
 	 */
-	public ResultMessage updateOrderState(String orderID,int state);
+	public ResultMessage updateOrderState(String orderID,OrderType orderType);
 	/**
 	 * (网站管理人员请求)将酒店工作人员信息的修改持久化保存
 	 * @param vo

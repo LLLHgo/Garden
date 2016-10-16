@@ -30,8 +30,8 @@ public class HotelstaffDataService_Stub implements HotelstaffDataService{
 	 * @param po
 	 * @throws RemoteException
 	 */
-	public void updatePassword(HotelstaffPO po) throws RemoteException {
-		System.out.println("已向数据库更新密码");
+	public boolean updatePassword(HotelstaffPO po) throws RemoteException {
+		return true;
 	}
 
 	/**

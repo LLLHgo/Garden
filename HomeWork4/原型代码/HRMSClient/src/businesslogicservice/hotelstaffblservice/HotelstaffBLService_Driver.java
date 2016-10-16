@@ -2,6 +2,7 @@ package businesslogicservice.hotelstaffblservice;
 
 import java.util.List;
 
+import Enum.OrderType;
 import Enum.ResultMessage;
 import vo.hotelinfoVO.HotelinfoVO;
 import vo.hotelinfoVO.RoominfoVO;
@@ -22,7 +23,7 @@ public class HotelstaffBLService_Driver {
 		if(Hvo!=null)System.out.println("获得酒店工作人员信息成功！");
 
 		//获得酒店基本信息
-		HotelinfoVO HVO=hotelstaffBLService.gethotelinfoVO(new HotelinfoVO());
+		HotelinfoVO HVO=hotelstaffBLService.gethotelinfoVO("H00000000");
 		if(HVO!=null)System.out.println("获得酒店基本信息成功！");
 
 		//酒店订单列表
@@ -34,7 +35,7 @@ public class HotelstaffBLService_Driver {
 		if(HSvo!=null)System.out.println("获得酒店促销策略成功！");
 
 		//获得房间信息
-		RoominfoVO Rvo=hotelstaffBLService.getroominfo("413-2");
+		RoominfoVO Rvo=hotelstaffBLService.getroominfo("H00000000","413-2");
 		if(Rvo!=null)System.out.println("获得房间信息成功！");
 
 		//返回酒店工作人员信息
@@ -46,16 +47,16 @@ public class HotelstaffBLService_Driver {
 		if(hsbls)System.out.println("保存酒店工作人员信息更改成功！");
 
 		//设置密码
-		ResultMessage setPasswordResult=hotelstaffBLService.setPassword("000000");
+		ResultMessage setPasswordResult=hotelstaffBLService.setPassword("H00000000","000000");
 		if(setPasswordResult==ResultMessage.SUCCESS)System.out.println("修改密码成功");
 
 		//将酒店促销策略持久化保存
-		ResultMessage updatehotelStrategyResult=hotelstaffBLService.updatehotelStrategy(new HotelStrategyVO());
+		ResultMessage updatehotelStrategyResult=hotelstaffBLService.updatehotelStrategy("H00000000",new HotelStrategyVO());
 		if(updatehotelStrategyResult==ResultMessage.SUCCESS)System.out.println("酒店促销策略持久化保存成功");
 
 
 		//设置OrderState
-		ResultMessage updateOrderState=hotelstaffBLService.updateOrderState("H00000000", 0);
+		ResultMessage updateOrderState=hotelstaffBLService.updateOrderState("H00000000", OrderType.NORMALNONEXEC);
 		if(updateOrderState==ResultMessage.SUCCESS)System.out.println("设置OrderState");
 
 		//更新房间信息

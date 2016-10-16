@@ -60,8 +60,8 @@ public class HotelinfoDataService_Stub implements HotelinfoDataService{
 	 * @param po
 	 * @throws RemoteException
 	 */
-	public void updatehotelinfo(HotelinfoPO po) throws RemoteException {
-
+	public boolean updatehotelinfo(HotelinfoPO po) throws RemoteException {
+		return true;
 	}
 
 	/**
@@ -69,8 +69,8 @@ public class HotelinfoDataService_Stub implements HotelinfoDataService{
 	 * @param po
 	 * @throws RemoteException
 	 */
-	public void updateroominfo(RoominfoPO po) throws RemoteException {
-
+	public boolean updateroominfo(RoominfoPO po) throws RemoteException {
+		return true;
 	}
 
 	/**
@@ -78,8 +78,8 @@ public class HotelinfoDataService_Stub implements HotelinfoDataService{
 	 * @param po
 	 * @throws RemoteException
 	 */
-	public void delete(RoominfoPO po) throws RemoteException {
-
+	public boolean delete(RoominfoPO po) throws RemoteException {
+		return true;
 	}
 
 	/**

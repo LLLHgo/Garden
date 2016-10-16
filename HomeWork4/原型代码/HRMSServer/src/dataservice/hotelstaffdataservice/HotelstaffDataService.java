@@ -21,7 +21,7 @@ public interface HotelstaffDataService {
 	 * @param po
 	 * @throws RemoteException
 	 */
-	public void updatePassword(HotelstaffPO po) throws RemoteException;
+	public boolean updatePassword(HotelstaffPO po) throws RemoteException;
 	/**
 	 * 检查酒店工作人员账户密码
 	 * @param po

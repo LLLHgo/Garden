@@ -31,19 +31,19 @@ public interface HotelinfoDataService {
 	 * @param po
 	 * @throws RemoteException
 	 */
-	public void updatehotelinfo(HotelinfoPO po) throws RemoteException;
+	public boolean updatehotelinfo(HotelinfoPO po) throws RemoteException;
 	/**
 	 * 更新房间信息
 	 * @param po
 	 * @throws RemoteException
 	 */
-	public void updateroominfo(RoominfoPO po) throws RemoteException;
+	public boolean updateroominfo(RoominfoPO po) throws RemoteException;
 	/**
 	 * 删除持久化数据
 	 * @param po
 	 * @throws RemoteException
 	 */
-	public void delete(RoominfoPO po) throws RemoteException;
+	public boolean delete(RoominfoPO po) throws RemoteException;
 	/**
 	 * 结束持久化数据库的使用
 	 * @throws RemoteException

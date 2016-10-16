@@ -3,6 +3,7 @@ package businesslogicservice.hotelstaffblservice;
 import java.util.ArrayList;
 import java.util.List;
 
+import Enum.OrderType;
 import Enum.ResultMessage;
 import Enum.RoomState;
 import Enum.Star;
@@ -53,7 +54,7 @@ public class HotelstaffBLService_Stub implements HotelstaffBLService{
 	 * @param password
 	 * @return 是否将新密码持久化保存
 	 */
-	public ResultMessage setPassword(String password) {
+	public ResultMessage setPassword(String hotelD,String password) {
 		return ResultMessage.SUCCESS;
 	}
 
@@ -62,7 +63,7 @@ public class HotelstaffBLService_Stub implements HotelstaffBLService{
 	 * @param vo
 	 * @return 是否将酒店促销策略持久化保存
 	 */
-	public ResultMessage updatehotelStrategy(HotelStrategyVO vo) {
+	public ResultMessage updatehotelStrategy(String hotelID,HotelStrategyVO vo) {
 		return ResultMessage.SUCCESS;
 	}
 
@@ -80,7 +81,7 @@ public class HotelstaffBLService_Stub implements HotelstaffBLService{
 	 * @param vo
 	 * @return 酒店信息
 	 */
-	public HotelinfoVO gethotelinfoVO(HotelinfoVO vo) {
+	public HotelinfoVO gethotelinfoVO(String hotelID) {
 		return hotelinfovo;
 	}
 
@@ -89,7 +90,7 @@ public class HotelstaffBLService_Stub implements HotelstaffBLService{
 	 * @param roomID
 	 * @return 房间信息
 	 */
-	public RoominfoVO getroominfo(String roomID) {
+	public RoominfoVO getroominfo(String hotelID,String roomID) {
 		RoominfoVO roominfovo = new RoominfoVO("四人间","413-3",666.6,RoomState.Usable);
 		return roominfovo;
 	}
@@ -119,7 +120,7 @@ public class HotelstaffBLService_Stub implements HotelstaffBLService{
 	 * @param state
 	 * @return 是否将订单状态持久化保存
 	 */
-	public ResultMessage updateOrderState(String orderID, int state) {
+	public ResultMessage updateOrderState(String orderID, OrderType orderType) {
 		return ResultMessage.SUCCESS;
 	}
 
@@ -160,5 +161,7 @@ public class HotelstaffBLService_Stub implements HotelstaffBLService{
 	public ResultMessage deletehotelStrategy(String hotelID, HotelStrategyVO hotelStrategy) {
 		return ResultMessage.SUCCESS;
 	}
+
+
 
 }
