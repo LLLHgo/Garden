@@ -1,0 +1,16 @@
+<<<<<<< Updated upstream
+/mockAndTest/
+/presentation/
+/Enum/
+/businesslogic/
+/businesslogicservice/
+/dataservice/
+/po/
+/rmi/
+=======
+/Enum/
+/businesslogic/
+/businesslogicservice/
+/po/
+>>>>>>> Stashed changes
+/vo/
