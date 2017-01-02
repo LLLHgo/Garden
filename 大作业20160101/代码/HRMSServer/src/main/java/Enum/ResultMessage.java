@@ -1,0 +1,37 @@
+package Enum;
+/**
+ * 带状态的返回值
+ * @author yilu
+ *
+ */
+public enum ResultMessage {
+    SUCCESS,
+    FAIL,
+	// 账户管理用到的值
+    DUPLICATENAME,
+    DUPLICATETEL,
+	DATEBASEFAIL,
+	SAMEPASSWORD,
+	SAMEINFO,
+	REMOTEEXCEPTION,
+	VOIDTEL,
+	VOIDPASSWORD,
+	VOIDINFO,
+	// 酒店管理用到的值
+	AddAreaSuccess,
+	// 日志管理用到的值
+	WRONGFORMAT,
+	// 订单用到的值
+	IDINVALID,
+	HASVOID,
+	WORNGORDERTYPEWHENCREATE,
+	NOROOMORDERED,
+	NODAYORDERED,
+	STARTDAYNOTALLOWED,
+	CANCELANDCANNOTMODIFY,
+	//撤销异常订单状态用到的值
+	FAULT,
+	DUPLICATESTRATEGY,
+	SQLERROR,
+	CLASSFORNAME
+}

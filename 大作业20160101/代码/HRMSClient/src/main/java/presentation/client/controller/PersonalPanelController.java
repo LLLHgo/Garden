@@ -1,0 +1,18 @@
+package presentation.client.controller;
+
+import Enum.ResultMessage;
+import businesslogic.clientbl.ClientManage;
+import businesslogicservice.clientblservice.ClientBLService;
+import vo.clientVO.ClientVO;
+
+public class PersonalPanelController {
+	ClientBLService client=new ClientManage();
+public ClientVO getclient(String clientID){
+	return client.getclient(clientID);
+}
+public boolean updateInfo(ClientVO vo){
+ResultMessage res=client.updateInfo(vo);
+if(res!=null)return true;
+else return false;
+}
+}
